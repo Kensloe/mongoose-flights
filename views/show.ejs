@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+<table>
+    <tr>
+        <th>Airport</th>
+        <th>Arrival</th>
+    <tr>
+    <% flight.destinations.sort(function(a,b) { %>
+    }) %>
+    <% flight.destinations.forEach(function(d) {
+    <tr>
+    <td><%= d.airport %></td>
+    <td><%= d.arrival%></td>
+    </tr>
+    <% }); %>
+<% }); %>
+</tbody>
+</table>
+<%} else {
+    <h5>No Arrival Date</h5>
+<%} %>
+<a href="/flights/<%= flight._id %>/tickets/new">New Ticket</a>a></a>
+<%- include('../partials/header') %>
